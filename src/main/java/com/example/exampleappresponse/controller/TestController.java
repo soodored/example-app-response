@@ -15,6 +15,11 @@ import java.util.List;
 @RestController
 public class TestController {
 
+    @GetMapping("/")
+    public String hello(){
+        return "Hello";
+    }
+
     @GetMapping("/get/200")
     public ResponseEntity<UserResponce> test200() {
         return new ResponseEntity<>(new UserResponce(1, "test"), HttpStatus.OK);
